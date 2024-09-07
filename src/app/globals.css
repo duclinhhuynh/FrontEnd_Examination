@@ -25,3 +25,15 @@ body {
     text-wrap: balance;
   }
 }
+@layer utilities {
+  .border-gradient-focus {
+    border: 1px solid transparent;
+    border-radius: 0.375rem; 
+  }
+  .border-gradient-focus:focus {
+    border-image-source: linear-gradient(45deg, #82DBF7 0%, #B6F09C 100%);
+    border-image-slice: 0.5;
+    outline: none; 
+  }
+}
+
