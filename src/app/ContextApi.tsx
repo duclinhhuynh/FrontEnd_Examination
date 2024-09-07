@@ -14,15 +14,11 @@ export interface MenuItem {
 }
 
 export interface DarkModeMenu {
-    id: String;
+    id: string;
     name: string;
     icon: ReactNode;
     isSelected: boolean;
 }
-type DropDownPosition = {
-    top: number;
-    left: number;
-};
 
 interface AppContextType {
     menuItemsObject: {
