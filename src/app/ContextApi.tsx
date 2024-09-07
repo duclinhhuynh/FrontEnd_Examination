@@ -45,7 +45,10 @@ interface AppContextType {
         showSideBar: boolean;
         setShowSideBar: React.Dispatch<React.SetStateAction<boolean>>;
     };
-    
+    showSearchBarObject: {
+        showSearchBar: boolean;
+        setShowSearchBar: React.Dispatch<React.SetStateAction<boolean>>;
+    };
 }
 const defaultState: AppContextType = {
     menuItemsObject: {
@@ -67,6 +70,10 @@ const defaultState: AppContextType = {
     showSideBarObject: {
         showSideBar: true,
         setShowSideBar: () => { throw new Error("showSideBarObject called outside of AppProvider"); },
+    },
+    showSearchBarObject: {
+        showSearchBar: false,
+        setShowSearchBar: () => { throw new Error("setShowSearchBar called outside of AppProvider"); },
     },
 };
 
@@ -115,6 +122,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
                 openDarkModeMenuObject: { openDarkModeMenu, setOpenDarkModeMenu },
                 darkModeMenuObject: { darkModeMenu, setDarkModeMenu },
                 showSideBarObject: { showSideBar, setShowSideBar },
+                showSearchBarObject: { showSearchBar, setShowSearchBar },
             }}
         >
             {children}

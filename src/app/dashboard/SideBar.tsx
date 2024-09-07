@@ -20,7 +20,7 @@ export default function SideBar() {
         <div
             ref={menuRef}
             style={{ position: "relative" }}
-            className={`${openSideBar ? "w-[320px] p-6" : "w-[100px] p-4"} h-screen pt-12 relative transition-all duration-300  bg-white z-10 ${showSideBar ? "block" : "hidden"}`}>
+            className={`${openSideBar ? "w-[320px] p-6" : "w-[100px] p-4"} h-screen pt-12 relative transition-all duration-300  bg-black z-10 ${showSideBar ? "block" : "hidden"}`}>
             <RoundedArrowIcon />
             <Logo />
             <Links />
@@ -63,12 +63,12 @@ export default function SideBar() {
                 <div className="bg-sky-500 p-[6px] rounded-md w-10 h-10 flex items-center justify-center">
                     <RiNextjsFill className="text-white text-[22px]" />
                 </div>
-                {openSideBar && (
+                {/* {openSideBar && (
                     <div className="flex gap-1 text-[23px]">
                         <span className="font-bold text-sky-500">Next</span>
                         <span className="text-slate-600">dk</span>
                     </div>
-                )}
+                )} */}
             </div>
         );
     }
